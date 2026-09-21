@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Unser Hochzeitsgeschenk für euch</title>
+  <meta name="description" content="Ein kulinarisches Geschenk zur Hochzeit – wählt eines von vier Restaurants für ein gemeinsames Essen." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <script>
+    // Fallback-Funktionen für fehlende Bilder – bewusst inline im <head>,
+    // damit sie garantiert verfügbar sind, sobald ein <img>-Tag einen
+    // Ladefehler auslöst (auch bevor assets/js/main.js geladen ist).
+    function handleCardImgError(img) {
+      img.style.display = "none";
+      var label = img.nextElementSibling;
+      if (label) label.classList.add("show");
+    }
+    function handleGalleryImgError(img) {
+      var item = img.closest(".gallery-item");
+      if (!item) return;
+      item.classList.add("is-placeholder");
+      item.removeAttribute("data-full");
+      item.innerHTML = '<span class="icon">🖼️</span><span>Bild folgt</span>';
+    }
+  </script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">Für <span>Euch</span> Beide</a>
+      <nav class="main-nav">
+        <a href="#story">Die Idee</a>
+        <a href="#restaurants">Restaurants</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Menü öffnen" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="hero">
+      <div class="hero-content">
+        <span class="eyebrow">Ein Geschenk zur Hochzeit</span>
+        <h1>Zwei Abende, zwei Erinnerungen</h1>
+        <p class="lead">
+          Statt eines Dinges schenken wir euch ein Erlebnis: Wählt zwei der vier
+          ausgesuchten Restaurants aus und genießt jeweils ein gemeinsames Essen
+          auf uns – als kleine Auszeit füreinander.
+        </p>
+        <div class="hero-actions">
+          <a href="#restaurants" class="btn btn-primary">Restaurants entdecken</a>
+          <a href="#story" class="btn btn-secondary">Die Idee dahinter</a>
+        </div>
+      </div>
+      <div class="scroll-hint">
+        <span>Scrollen</span>
+        <span class="line"></span>
+      </div>
+    </section>
+
+    <!-- STORY -->
+    <section class="story" id="story">
+      <div class="container reveal">
+        <span class="eyebrow">Herzlichen Glückwunsch</span>
+        <h2 class="section-title">Unsere Geschenk-Idee</h2>
+        <p>
+          Liebe Melina, lieber Simon, zu eurer Hochzeit wollten wir euch etwas
+          schenken, das euch noch lange in Erinnerung bleibt. Deshalb laden wir
+          euch zu zwei besonderen Restaurantbesuchen ein – ihr sucht euch zwei
+          der vier unten vorgestellten Restaurants aus, meldet euch bei uns zur
+          Terminfindung, und den Rest übernehmen wir.
+        </p>
+        <p class="signature">Von Herzen, Kay und Lukas</p>
+      </div>
+    </section>
+
+    <!-- RESTAURANTS -->
+    <section class="restaurants" id="restaurants">
+      <div class="container">
+        <span class="eyebrow" style="display:block;text-align:center;">Wählt zwei aus vier</span>
+        <h2 class="section-title reveal">Unsere ausgesuchten Restaurants</h2>
+        <p class="section-subtitle reveal">
+          Klickt auf ein Restaurant, um Fotos und die Speisekarte anzusehen.
+        </p>
+
+        <div class="card-grid">
+
+          <article class="restaurant-card reveal">
+            <div class="card-image">
+              <img class="card-img" src="assets/images/restaurant-1/teaser.jpg" alt="Fasika" onerror="handleCardImgError(this)" />
+              <span class="placeholder-label">Bild folgt</span>
+            </div>
+            <div class="card-body">
+              <h3>Fasika</h3>
+              <p>Äthiopische Küche mitten in Köln – bunte Gewürze, herzliche Atmosphäre, gemeinsam mit den Händen genossen.</p>
+              <a href="restaurants/restaurant-1.html" class="card-link">Restaurant entdecken →</a>
+            </div>
+          </article>
+
+          <article class="restaurant-card reveal">
+            <div class="card-image">
+              <img class="card-img" src="assets/images/restaurant-2/teaser.jpg" alt="Medina" onerror="handleCardImgError(this)" />
+              <span class="placeholder-label">Bild folgt</span>
+            </div>
+            <div class="card-body">
+              <h3>Medina</h3>
+              <p>Nordafrikanische Küche in Köln – Tajines, Couscous und tunesisches Street Food in traditioneller Atmosphäre.</p>
+              <a href="restaurants/restaurant-2.html" class="card-link">Restaurant entdecken →</a>
+            </div>
+          </article>
+
+          <article class="restaurant-card reveal">
+            <div class="card-image">
+              <img class="card-img" src="assets/images/restaurant-3/teaser.jpg" alt="Shanghai Küche" onerror="handleCardImgError(this)" />
+              <span class="placeholder-label">Bild folgt</span>
+            </div>
+            <div class="card-body">
+              <h3>Shanghai Küche</h3>
+              <p>Authentische chinesische Küche im Belgischen Viertel – Xiao Long Bao, Dim Sum und Shanghai-Spezialitäten.</p>
+              <a href="restaurants/restaurant-3.html" class="card-link">Restaurant entdecken →</a>
+            </div>
+          </article>
+
+          <article class="restaurant-card reveal">
+            <div class="card-image">
+              <img class="card-img" src="assets/images/restaurant-4/teaser.jpg" alt="Cafe Especial" onerror="handleCardImgError(this)" />
+              <span class="placeholder-label">Bild folgt</span>
+            </div>
+            <div class="card-body">
+              <h3>Cafe Especial</h3>
+              <p>Mexican Madness seit 1986 in Köln-Deutz – Tacos, Fajitas, Margaritas und beste Cantina-Stimmung.</p>
+              <a href="restaurants/restaurant-4.html" class="card-link">Restaurant entdecken →</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Mit <span class="heart">♥</span> geschenkt zur Hochzeit von Melina &amp; Simon</p>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

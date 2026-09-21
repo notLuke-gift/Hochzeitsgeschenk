@@ -1,0 +1,469 @@
+﻿<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cafe Especial – Mexikanisches Restaurant | Unser Hochzeitsgeschenk</title>
+  <meta name="description" content="Fotos und Speisekarte des Cafe Especial Köln – Mexican Madness since 1986." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+  <script>
+    function handleCardImgError(img) {
+      img.style.display = "none";
+      var label = img.nextElementSibling;
+      if (label) label.classList.add("show");
+    }
+    function handleGalleryImgError(img) {
+      var item = img.closest(".gallery-item");
+      if (!item) return;
+      item.classList.add("is-placeholder");
+      item.removeAttribute("data-full");
+      item.innerHTML = '<span class="icon">🖼️</span><span>Bild folgt</span>';
+    }
+  </script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="../index.html" class="back-link">← Zurück zur Übersicht</a>
+      <nav class="main-nav">
+        <a href="#galerie">Galerie</a>
+        <a href="#speisekarte">Speisekarte</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Menü öffnen" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- BANNER -->
+    <section class="restaurant-hero" style="--hero-image:url('../assets/images/restaurant-4/hero.jpg');">
+      <div class="container">
+        <span class="eyebrow">Mexikanisches Restaurant</span>
+        <h1>Cafe Especial</h1>
+        <p class="intro-text">
+          Mexican Madness seit 1986: In Köln-Deutz erwartet euch waschechte
+          mexikanische Küche, kräftige Cocktails und Tequila – alles in einer
+          bunten, lebendigen Cantina-Atmosphäre, die sich seit über 40 Jahren
+          treu geblieben ist.
+        </p>
+      </div>
+    </section>
+
+    <!-- INFO -->
+    <section class="restaurant-info">
+      <div class="container reveal">
+        <div class="info-meta">
+          <div>
+            <span>Adresse</span>
+            <strong>Neuhöfferstr. 32, Köln Deutz</strong>
+          </div>
+          <div>
+            <span>Küche</span>
+            <strong>Mexikanisch / Cantina</strong>
+          </div>
+          <div>
+            <span>Öffnungszeiten</span>
+            <strong>Mo – So, 12:00 Uhr – open end</strong>
+          </div>
+          <div>
+            <span>Telefon</span>
+            <strong><a href="tel:+49221814755">0221 814755</a></strong>
+          </div>
+          <div>
+            <span>Website</span>
+            <strong><a href="https://www.cafe-especial.com/cologne/" target="_blank" rel="noopener">cafe-especial.com</a></strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALERIE -->
+    <section class="gallery" id="galerie">
+      <div class="container">
+        <span class="eyebrow" style="display:block;text-align:center;">Einblicke</span>
+        <h2 class="section-title reveal">Bildergalerie</h2>
+        <p class="section-subtitle reveal">
+          Fotos folgen in Kürze – hier ein erster Eindruck.
+        </p>
+
+        <div class="gallery-grid">
+          <div class="gallery-item reveal" data-full="../assets/images/restaurant-4/1.jpg" data-alt="Cafe Especial – Bild 1">
+            <img src="../assets/images/restaurant-4/1.jpg" alt="Cafe Especial – Bild 1" loading="lazy" onerror="handleGalleryImgError(this)" />
+          </div>
+          <div class="gallery-item reveal" data-full="../assets/images/restaurant-4/2.jpg" data-alt="Cafe Especial – Bild 2">
+            <img src="../assets/images/restaurant-4/2.jpg" alt="Cafe Especial – Bild 2" loading="lazy" onerror="handleGalleryImgError(this)" />
+          </div>
+          <div class="gallery-item reveal" data-full="../assets/images/restaurant-4/3.jpg" data-alt="Cafe Especial – Bild 3">
+            <img src="../assets/images/restaurant-4/3.jpg" alt="Cafe Especial – Bild 3" loading="lazy" onerror="handleGalleryImgError(this)" />
+          </div>
+          <div class="gallery-item reveal" data-full="../assets/images/restaurant-4/4.jpg" data-alt="Cafe Especial – Bild 4">
+            <img src="../assets/images/restaurant-4/4.jpg" alt="Cafe Especial – Bild 4" loading="lazy" onerror="handleGalleryImgError(this)" />
+          </div>
+          <div class="gallery-item reveal" data-full="../assets/images/restaurant-4/5.jpg" data-alt="Cafe Especial – Bild 5">
+            <img src="../assets/images/restaurant-4/5.jpg" alt="Cafe Especial – Bild 5" loading="lazy" onerror="handleGalleryImgError(this)" />
+          </div>
+          <div class="gallery-item reveal" data-full="../assets/images/restaurant-4/6.jpg" data-alt="Cafe Especial – Bild 6">
+            <img src="../assets/images/restaurant-4/6.jpg" alt="Cafe Especial – Bild 6" loading="lazy" onerror="handleGalleryImgError(this)" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SPEISEKARTE -->
+    <section class="menu" id="speisekarte">
+      <div class="container">
+        <span class="eyebrow" style="display:block;text-align:center;">Zur freien Wahl</span>
+        <h2 class="section-title reveal">Speisekarte</h2>
+        <p class="section-subtitle reveal">
+          Mexican Madness – die vollständige Karte kann sich vor Ort ändern.
+        </p>
+
+        <!--
+          Anleitung: Jede Kategorie ist ein <div class="menu-category">.
+          Jedes Gericht ist ein <div class="menu-item"> mit Name,
+          optionaler Beschreibung und Preis. Zeilen einfach kopieren,
+          Text/Preis anpassen oder Zeilen löschen/ergänzen.
+        -->
+        <div class="menu-categories">
+
+          <div class="menu-category reveal">
+            <h3>Vorspeisen</h3>
+            <div class="menu-items">
+              <div class="menu-item">
+                <div class="menu-item-info">
+                  <h4>Taquitos</h4>
+                  <p>Zwei gerollte frittierte Maistortillas mit Rindfleisch gefüllt, dazu Guacamole und Sauerrahm.</p>
+                </div>
+                <span class="menu-item-price">13,50 €</span>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-info">
+                  <h4>Nachos</h4>
+                  <p>Maistortillachips überbacken mit Käse, Paprika und Chilis.</p>
+                </div>
+                <span class="menu-item-price">13,50 €</span>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-info">
+                  <h4>Nachos Todos</h4>
+                  <p>Maistortillachips überbacken mit Käse und Hackfleisch, Paprika und Chilis, darüber Salat und Sauerrahm.</p>
+                </div>
+                <span class="menu-item-price">16,00 €</span>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-info">
+                  <h4>Quesada</h4>
+                  <p>Eine große gegrillte Weizentortilla gefüllt mit Käse und Zwiebeln, dazu Guacamole und Sauerrahm.</p>
+                </div>
+                <span class="menu-item-price">13,50 €</span>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-info">
+                  <h4>Quesadillas de Queso de Borrego</h4>
+                  <p>Zwei kleine gegrillte Weizentortillas gefüllt mit Schafskäse und Zwiebeln, dazu Sauerrahm.</p>
+                </div>
+                <span class="menu-item-price">14,00 €</span>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-info">
+                  <h4>Guacamole</h4>
+                  <p>Dip aus frischen Avocados, Tomaten und Zwiebeln, serviert mit Maistortilla-Chips.</p>
+                </div>
+                <span class="menu-item-price">14,80 €</span>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-info">
+                  <h4>Flautas</h4>
+                  <p>Zwei gerollte frittierte Weizentortillas mit Hähnchenfleisch gefüllt, dazu eine scharfe Sauce.</p>
+                </div>
+                <span class="menu-item-price">13,50 €</span>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-info">
+                  <h4>Chicken Wings</h4>
+                  <p>Frittierte Hähnchenflügel mit Barbecuesauce.</p>
+                </div>
+                <span class="menu-item-price">15,00 €</span>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-info">
+                  <h4>Plato de Entradas Mixto</h4>
+                  <p>Eine Zusammenstellung aus Guacamole, Quesadilla, Taquito, Chicken Wings und Ensalada de Pollo.</p>
+                </div>
+                <span class="menu-item-price">22,00 €</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-category reveal">
+            <h3>Salate</h3>
+            <p style="font-size:0.85rem;color:var(--color-text-muted);margin-bottom:1rem;">Alle Salate werden mit 2 warmen Weizentortillas serviert.</p>
+            <div class="menu-items">
+              <div class="menu-item">
+                <div class="menu-item-info">
+                  <h4>Caesar Salat</h4>
+                  <p>Romanasalat in Parmesan-Knoblauch-Dressing mit Croutons, nach dem Originalrezept des „Caesar Hotels“ in Tijuana.</p>
+                </div>
+                <span class="menu-item-price">14,50 €</span>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-info">
+                  <h4>Fajita Chicken Salad</h4>
+                  <p>Romanasalat mit Gurken und Tomaten in Senfdressing, darüber marinierte, gebratene Fajitas-Hähnchenbruststreifen.</p>
+                </div>
+                <span class="menu-item-price">15,90 €</span>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-info">
+                  <h4>Ensalada Espinacas</h4>
+                  <p>Spinatblätter und Schafskäse in Senfdressing, garniert mit Speckwürfeln.</p>
+                </div>
+                <span class="menu-item-price">15,90 €</span>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-info">
+                  <h4>Ensalada de Pollo</h4>
+                  <p>Gemischter Salat mit gekochten Hähnchenfleischstückchen, Avocado, geriebenem Käse, Mais, Tomaten, Gurken und Oliven in Senfdressing.</p>
+                </div>
+                <span class="menu-item-price">15,90 €</span>
+              </div>
+            </div>
+          </div>
+          <div class="menu-category reveal">
+            <h3>Speisen</h3>
+            <p style="font-size:0.85rem;color:var(--color-text-muted);margin-bottom:1rem;">Jeweils serviert mit mexikanischem Reis und Bohnenmus (außer Wraps).</p>
+            <div class="menu-items">
+              <div class="menu-item">
+                <div class="menu-item-info">
+                  <h4>Mexican Wrap</h4>
+                  <p>Eine Weizentortilla gefüllt mit Salat, Tomaten und Käse, dazu Chipotlesauce und ein kleiner Saisonsalat. Vegetarisch oder mit Hähnchen, Rindfleisch oder Lachs.</p>
+                </div>
+                <span class="menu-item-price">15,90 €</span>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-info">
+                  <h4>Quesada Grande</h4>
+                  <p>Eine große Weizentortilla gefüllt mit geschmolzenem Käse, Eisbergsalat und Tomaten, dazu Guacamole und Sauerrahm.</p>
+                </div>
+                <span class="menu-item-price">15,90 €</span>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-info">
+                  <h4>Burrito</h4>
+                  <p>Eine große Weizentortilla gefüllt mit Käse und Bohnenmus, überzogen mit Sauce. Wahlweise mit Zucchini-Paprika-Füllung, Hähnchen, Rindfleisch oder Chili Colorado.</p>
+                </div>
+                <span class="menu-item-price">15,90 €</span>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-info">
+                  <h4>Enchiladas Suizas</h4>
+                  <p>Gerollte Maistortillas gefüllt mit Käse und Zwiebeln, überzogen mit Enchiladasauce, getoppt mit Sauerrahm.</p>
+                </div>
+                <span class="menu-item-price">15,90 €</span>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-info">
+                  <h4>Enchiladas Aguacate</h4>
+                  <p>Gerollte Weizentortilla mit frischen Avocados, Käse und Zwiebeln, mit Ranchero-Sauce überbacken, getoppt mit Sauerrahm.</p>
+                </div>
+                <span class="menu-item-price">15,90 €</span>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-info">
+                  <h4>Enchiladas Verdes</h4>
+                  <p>Gerollte Maistortilla mit frischem Spinat, Käse und Zwiebeln, überzogen mit traditioneller Salsa Verde aus Tomatillos.</p>
+                </div>
+                <span class="menu-item-price">15,90 €</span>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-info">
+                  <h4>Tacos</h4>
+                  <p>Gerollte Maistortilla gefüllt mit Hähnchen oder Rindfleisch, darüber Eisbergsalat, Tomaten, Käse und Tacosauce.</p>
+                </div>
+                <span class="menu-item-price">15,90 €</span>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-info">
+                  <h4>Tacos California</h4>
+                  <p>Knusprige Tacoshell mit Hähnchen- oder Rindfleischfüllung, darüber Käse, Tomaten, Salat und Tacosauce.</p>
+                </div>
+                <span class="menu-item-price">15,90 €</span>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-info">
+                  <h4>Chimichanga</h4>
+                  <p>Große Weizentortilla gefüllt mit Käse und Rinderhack, Hähnchen oder Rindfleisch, überzogen mit Enchiladasauce, getoppt mit Guacamole und Sauerrahm.</p>
+                </div>
+                <span class="menu-item-price">15,90 €</span>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-info">
+                  <h4>Salmon Asado</h4>
+                  <p>Lachsfilet vom Grill mit einer Avocado-Tomatensalsa.</p>
+                </div>
+                <span class="menu-item-price">15,90 €</span>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-info">
+                  <h4>Camarones a la Plancha del Guajillo</h4>
+                  <p>In leichter Chilisauce marinierte und gegrillte Garnelen mit einem Guajillo-Dip.</p>
+                </div>
+                <span class="menu-item-price">26,50 €</span>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="menu-category reveal">
+            <h3>Dessert</h3>
+            <div class="menu-items">
+              <div class="menu-item">
+                <div class="menu-item-info">
+                  <h4>Platano Macho</h4>
+                  <p>Banane im knusprig gebackenen Weizentortillamantel mit Schokoladensauce.</p>
+                </div>
+                <span class="menu-item-price">6,50 €</span>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-info">
+                  <h4>Flan de Caramelo</h4>
+                  <p>Der traditionelle mexikanische Festtagspudding.</p>
+                </div>
+                <span class="menu-item-price">6,50 €</span>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-info">
+                  <h4>Piña Fresca</h4>
+                  <p>Frische Ananas mit Sahne.</p>
+                </div>
+                <span class="menu-item-price">6,50 €</span>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-info">
+                  <h4>Pudin de Chocolate</h4>
+                  <p>Hausgemachter Schokoladenpudding mit fruchtiger Mangosauce.</p>
+                </div>
+                <span class="menu-item-price">6,00 €</span>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-info">
+                  <h4>Empanada de Manzana</h4>
+                  <p>Warme gefüllte Apfeltaschen, serviert mit Apfelsirup.</p>
+                </div>
+                <span class="menu-item-price">6,50 €</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-category reveal">
+            <h3>Cocktails</h3>
+            <div class="menu-items">
+              <div class="menu-item">
+                <div class="menu-item-info">
+                  <h4>Margarita</h4>
+                </div>
+                <span class="menu-item-price">11,20 €</span>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-info">
+                  <h4>Mojito</h4>
+                  <p>Havanna-Rum, frische Minze, frischer Limettensaft, brauner Zucker und Soda.</p>
+                </div>
+                <span class="menu-item-price">11,75 €</span>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-info">
+                  <h4>Piña Colada</h4>
+                  <p>Weißer und brauner Rum, Coconut Cream, Ananas und Ananassaft.</p>
+                </div>
+                <span class="menu-item-price">11,75 €</span>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-info">
+                  <h4>Tequila Sunrise</h4>
+                  <p>Tequila, Orangensaft und Grenadine.</p>
+                </div>
+                <span class="menu-item-price">11,20 €</span>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-info">
+                  <h4>Cuba Libre</h4>
+                  <p>Havanna-Rum, Coca Cola und Limetten.</p>
+                </div>
+                <span class="menu-item-price">11,20 €</span>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-info">
+                  <h4>Virgin Mojito (alkoholfrei)</h4>
+                  <p>Frische Minze, frischer Limettensaft, brauner Zucker und Ginger Ale.</p>
+                </div>
+                <span class="menu-item-price">9,20 €</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-category reveal">
+            <h3>Getränke</h3>
+            <div class="menu-items">
+              <div class="menu-item">
+                <div class="menu-item-info">
+                  <h4>Kölsch (0,2 l)</h4>
+                </div>
+                <span class="menu-item-price">2,80 €</span>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-info">
+                  <h4>Corona (auch alkoholfrei)</h4>
+                </div>
+                <span class="menu-item-price">5,10 €</span>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-info">
+                  <h4>José Cuervo Especial (2 cl)</h4>
+                </div>
+                <span class="menu-item-price">4,90 €</span>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-info">
+                  <h4>Softdrinks (0,2 l)</h4>
+                  <p>Coca Cola, Fanta, Sprite u. a.</p>
+                </div>
+                <span class="menu-item-price">3,40 €</span>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-info">
+                  <h4>Kaffee</h4>
+                </div>
+                <span class="menu-item-price">3,50 €</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <p class="menu-note">Alle Preise inkl. MwSt. Quelle: <a href="https://www.cafe-especial.com/cologne/" target="_blank" rel="noopener">cafe-especial.com</a> – Änderungen vorbehalten.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Mit <span class="heart">♥</span> geschenkt zur Hochzeit von Melina &amp; Simon</p>
+  </footer>
+
+  <!-- Lightbox -->
+  <div class="lightbox">
+    <button class="lightbox-close" aria-label="Schließen">✕</button>
+    <button class="lightbox-prev" aria-label="Vorheriges Bild">‹</button>
+    <img src="" alt="" />
+    <button class="lightbox-next" aria-label="Nächstes Bild">›</button>
+  </div>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
+
+

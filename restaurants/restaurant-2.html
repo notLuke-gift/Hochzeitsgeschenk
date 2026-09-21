@@ -1,0 +1,568 @@
+﻿<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Medina – Nordafrikanisches Restaurant | Unser Hochzeitsgeschenk</title>
+  <meta name="description" content="Fotos und Speisekarte des Medina Restaurant Köln – Nordafrikanische Küche." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+  <script>
+    function handleCardImgError(img) {
+      img.style.display = "none";
+      var label = img.nextElementSibling;
+      if (label) label.classList.add("show");
+    }
+    function handleGalleryImgError(img) {
+      var item = img.closest(".gallery-item");
+      if (!item) return;
+      item.classList.add("is-placeholder");
+      item.removeAttribute("data-full");
+      item.innerHTML = '<span class="icon">🖼️</span><span>Bild folgt</span>';
+    }
+  </script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="../index.html" class="back-link">← Zurück zur Übersicht</a>
+      <nav class="main-nav">
+        <a href="#galerie">Galerie</a>
+        <a href="#speisekarte">Speisekarte</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Menü öffnen" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- BANNER -->
+    <section class="restaurant-hero" style="--hero-image:url('../assets/images/restaurant-2/hero.jpg');">
+      <div class="container">
+        <span class="eyebrow">Nordafrikanisches Restaurant</span>
+        <h1>Medina</h1>
+        <p class="intro-text">
+          Traditionelle nordafrikanische Küche im Herzen von Köln: hausgemachte
+          Tajines, Couscous-Spezialitäten und tunesisches Street Food – frisch
+          zubereitet in einer gemütlichen, traditionellen Atmosphäre.
+        </p>
+      </div>
+    </section>
+
+    <!-- INFO -->
+    <section class="restaurant-info">
+      <div class="container reveal">
+        <div class="info-meta">
+          <div>
+            <span>Adresse</span>
+            <strong>Luxemburger Str. 15, 50674 Köln</strong>
+          </div>
+          <div>
+            <span>Küche</span>
+            <strong>Nordafrikanisch / Tunesisch</strong>
+          </div>
+          <div>
+            <span>Öffnungszeiten</span>
+            <strong>Di – Fr 16–22 Uhr · Sa 14–23 Uhr · So 14–22 Uhr · Mo geschlossen</strong>
+          </div>
+          <div>
+            <span>Telefon</span>
+            <strong><a href="tel:+4922156091532">0221 56091532</a></strong>
+          </div>
+          <div>
+            <span>Website</span>
+            <strong><a href="https://www.medinakoeln.de/" target="_blank" rel="noopener">medinakoeln.de</a></strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALERIE -->
+    <section class="gallery" id="galerie">
+      <div class="container">
+        <span class="eyebrow" style="display:block;text-align:center;">Einblicke</span>
+        <h2 class="section-title reveal">Bildergalerie</h2>
+        <p class="section-subtitle reveal">
+          Fotos folgen in Kürze – hier ein erster Eindruck.
+        </p>
+
+        <div class="gallery-grid">
+          <div class="gallery-item reveal" data-full="../assets/images/restaurant-2/1.jpg" data-alt="Medina – Bild 1">
+            <img src="../assets/images/restaurant-2/1.jpg" alt="Medina – Bild 1" loading="lazy" onerror="handleGalleryImgError(this)" />
+          </div>
+          <div class="gallery-item reveal" data-full="../assets/images/restaurant-2/2.jpg" data-alt="Medina – Bild 2">
+            <img src="../assets/images/restaurant-2/2.jpg" alt="Medina – Bild 2" loading="lazy" onerror="handleGalleryImgError(this)" />
+          </div>
+          <div class="gallery-item reveal" data-full="../assets/images/restaurant-2/3.jpg" data-alt="Medina – Bild 3">
+            <img src="../assets/images/restaurant-2/3.jpg" alt="Medina – Bild 3" loading="lazy" onerror="handleGalleryImgError(this)" />
+          </div>
+          <div class="gallery-item reveal" data-full="../assets/images/restaurant-2/4.jpg" data-alt="Medina – Bild 4">
+            <img src="../assets/images/restaurant-2/4.jpg" alt="Medina – Bild 4" loading="lazy" onerror="handleGalleryImgError(this)" />
+          </div>
+          <div class="gallery-item reveal" data-full="../assets/images/restaurant-2/5.jpg" data-alt="Medina – Bild 5">
+            <img src="../assets/images/restaurant-2/5.jpg" alt="Medina – Bild 5" loading="lazy" onerror="handleGalleryImgError(this)" />
+          </div>
+          <div class="gallery-item reveal" data-full="../assets/images/restaurant-2/6.jpg" data-alt="Medina – Bild 6">
+            <img src="../assets/images/restaurant-2/6.jpg" alt="Medina – Bild 6" loading="lazy" onerror="handleGalleryImgError(this)" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SPEISEKARTE -->
+    <section class="menu" id="speisekarte">
+      <div class="container">
+        <span class="eyebrow" style="display:block;text-align:center;">Zur freien Wahl</span>
+        <h2 class="section-title reveal">Speisekarte</h2>
+        <p class="section-subtitle reveal">
+          Die bunte Vielfalt der nordafrikanischen Küche – die vollständige Karte kann sich vor Ort ändern.
+        </p>
+
+        <!--
+          Anleitung: Jede Kategorie ist ein <div class="menu-category">.
+          Jedes Gericht ist ein <div class="menu-item"> mit Name,
+          optionaler Beschreibung und Preis. Zeilen einfach kopieren,
+          Text/Preis anpassen oder Zeilen löschen/ergänzen.
+        -->
+        <div class="menu-categories">
+
+          <div class="menu-category reveal">
+            <h3>Vorspeisen</h3>
+            <div class="menu-items">
+              <div class="menu-item">
+                <div class="menu-item-info">
+                  <h4>Hummus</h4>
+                  <p>Pürierte Kichererbsen, Tahini, mit Zitronensaft und Olivenöl.</p>
+                </div>
+                <span class="menu-item-price">5,00 €</span>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-info">
+                  <h4>Rote Bete Salat</h4>
+                  <p>Rote Beete mit Zitronensaft und Olivenöl.</p>
+                </div>
+                <span class="menu-item-price">5,00 €</span>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-info">
+                  <h4>Baba Ghanousch</h4>
+                  <p>Pürierte und gegrillte Auberginen, Paprika und Tomaten mit Olivenöl.</p>
+                </div>
+                <span class="menu-item-price">5,50 €</span>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-info">
+                  <h4>Salat Houria</h4>
+                  <p>Pürierte frische Karotten mit Knoblauch, Harissa und Olivenöl.</p>
+                </div>
+                <span class="menu-item-price">5,50 €</span>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-info">
+                  <h4>Salat Mechouia</h4>
+                  <p>Gegrillte Paprika, Zwiebeln, Tomaten und Knoblauch mit Olivenöl.</p>
+                </div>
+                <span class="menu-item-price">6,00 €</span>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-info">
+                  <h4>Vorspeiseplatte</h4>
+                  <p>Verschiedene vegane, frisch zubereitete Vorspeisen mit Brot. 11,50 € (2 Pers.) · 19,50 € (4 Pers.)</p>
+                </div>
+                <span class="menu-item-price">ab 11,50 €</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-category reveal">
+            <h3>Tunesisches Street Food</h3>
+            <div class="menu-items">
+              <div class="menu-item">
+                <div class="menu-item-info">
+                  <h4>Linsensuppe</h4>
+                  <p>Wechselnde Tagessuppe, z. B. Harirra (marokkanische Tomatensuppe) oder Chorba Frik (Gerstensuppe).</p>
+                </div>
+                <span class="menu-item-price">5,50 €</span>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-info">
+                  <h4>Tunesische Brik</h4>
+                  <p>Frittierte tunesische Teigtasche gefüllt mit Kartoffelpüree, Petersilie, Thunfisch und Ei.</p>
+                </div>
+                <span class="menu-item-price">5,00 €</span>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-info">
+                  <h4>S'Han Tounsi</h4>
+                  <p>Bunter tunesischer Streetfood-Salatteller mit Thunfisch, pochiertem Ei, Kapern und Oliven.</p>
+                </div>
+                <span class="menu-item-price">9,50 €</span>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-info">
+                  <h4>Kefteji</h4>
+                  <p>Salat Mechouia gemischt mit Spiegeleiern, dazu Pommes und Oliven nach tunesischer Art. Zusätzlich mit Hähnchen, Merguez oder Kefta: 14,50 €</p>
+                </div>
+                <span class="menu-item-price">10,50 €</span>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-info">
+                  <h4>Pommes</h4>
+                </div>
+                <span class="menu-item-price">4,00 €</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-category reveal">
+            <h3>Grillteller</h3>
+            <div class="menu-items">
+              <div class="menu-item">
+                <div class="menu-item-info">
+                  <h4>Kefta</h4>
+                  <p>Würzige Hackfleisch-Frikadellen mit gemischtem Salat und hausgemachter Sauce.</p>
+                </div>
+                <span class="menu-item-price">13,50 €</span>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-info">
+                  <h4>Poulet</h4>
+                  <p>Fein mariniertes Hähnchen mit gemischtem Salat und hausgemachter Sauce.</p>
+                </div>
+                <span class="menu-item-price">13,50 €</span>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-info">
+                  <h4>Rindfleisch</h4>
+                  <p>Mediterran gewürzte Rindfleischstreifen mit gemischtem Salat und hausgemachter Sauce.</p>
+                </div>
+                <span class="menu-item-price">14,50 €</span>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-info">
+                  <h4>Merguez</h4>
+                  <p>Herzhafte, mildscharfe nordafrikanische Bratwurst mit gemischtem Salat und hausgemachter Sauce.</p>
+                </div>
+                <span class="menu-item-price">16,50 €</span>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-info">
+                  <h4>Fischteller</h4>
+                  <p>Marinierte gemischte Fischsorten mit gemischtem Salat und hausgemachter Sauce.</p>
+                </div>
+                <span class="menu-item-price">17,50 €</span>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-info">
+                  <h4>Gemischter Grillteller</h4>
+                </div>
+                <span class="menu-item-price">19,50 €</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-category reveal">
+            <h3>Shakshuka</h3>
+            <div class="menu-items">
+              <div class="menu-item">
+                <div class="menu-item-info">
+                  <h4>Schakschuka mit Eier</h4>
+                  <p>Zwiebeln und Paprika in würziger Tomatensauce mit pochierten Eiern, serviert mit Brot.</p>
+                </div>
+                <span class="menu-item-price">10,50 €</span>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-info">
+                  <h4>Schakschuka mit frischem Spinat und Feta</h4>
+                </div>
+                <span class="menu-item-price">11,50 €</span>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-info">
+                  <h4>Schakschuka mit Hackbällchen</h4>
+                </div>
+                <span class="menu-item-price">13,50 €</span>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-info">
+                  <h4>Schakschuka mit Merguez</h4>
+                </div>
+                <span class="menu-item-price">14,50 €</span>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-info">
+                  <h4>Schakschuka mit Meeresfrüchten</h4>
+                </div>
+                <span class="menu-item-price">14,50 €</span>
+              </div>
+            </div>
+          </div>
+          <div class="menu-category reveal">
+            <h3>Tajine</h3>
+            <div class="menu-items">
+              <div class="menu-item">
+                <div class="menu-item-info">
+                  <h4>Tajine Berber</h4>
+                  <p>Gemüse der Saison und grüne Oliven in würziger Tomatensauce.</p>
+                </div>
+                <span class="menu-item-price">11,50 €</span>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-info">
+                  <h4>Tajine Kefta</h4>
+                  <p>Würzige Hackfleischbällchen mit Erbsen, grünen Oliven und pochierten Eiern in Tomatensauce.</p>
+                </div>
+                <span class="menu-item-price">13,50 €</span>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-info">
+                  <h4>Tajine Poulet</h4>
+                  <p>Zarte Hähnchenkeule mit Gemüse der Saison, eingelegten Zitronen und grünen Oliven in Safransauce.</p>
+                </div>
+                <span class="menu-item-price">14,50 €</span>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-info">
+                  <h4>Tajine Sahara</h4>
+                  <p>Zarte Hähnchenkeule mit karamellisierten Zwiebeln und Rosinen in herzhafter Honigsauce, mit geröstetem Sesam und Mandeln.</p>
+                </div>
+                <span class="menu-item-price">14,50 €</span>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-info">
+                  <h4>Tajine Fisch</h4>
+                  <p>Meerbarbenfilet und Pangasiusfilet mit Gemüse der Saison und grünen Oliven in würziger Tomatensauce.</p>
+                </div>
+                <span class="menu-item-price">16,50 €</span>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-info">
+                  <h4>Tajine Barkouk</h4>
+                  <p>Rindfleisch mit Pflaumen in herzhafter Honigsauce, mit geröstetem Sesam und Mandeln.</p>
+                </div>
+                <span class="menu-item-price">17,50 €</span>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-info">
+                  <h4>Tajine Medina</h4>
+                  <p>Lammhaxe mit karamellisierten Zwiebeln, getrockneten Früchten und Kastanien in herzhafter Honigsauce, mit geröstetem Sesam und Mandeln.</p>
+                </div>
+                <span class="menu-item-price">24,50 €</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-category reveal">
+            <h3>Couscous</h3>
+            <div class="menu-items">
+              <div class="menu-item">
+                <div class="menu-item-info">
+                  <h4>Couscous Berber</h4>
+                  <p>Gemüse der Saison, Kichererbsen und Bouillon.</p>
+                </div>
+                <span class="menu-item-price">12,50 €</span>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-info">
+                  <h4>Couscous Chibtia</h4>
+                  <p>Gemüse der Saison, Kichererbsen, Bouillon und traditionelle tunesische Kräuter-Couscous-Bällchen.</p>
+                </div>
+                <span class="menu-item-price">13,50 €</span>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-info">
+                  <h4>Couscous Poulet</h4>
+                  <p>Hähnchenkeule, Gemüse der Saison, Kichererbsen und Bouillon.</p>
+                </div>
+                <span class="menu-item-price">14,50 €</span>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-info">
+                  <h4>Couscous Sahara</h4>
+                  <p>Hähnchenkeule, karamellisierte Zwiebeln, Kichererbsen und Rosinen, mit gerösteten Mandeln.</p>
+                </div>
+                <span class="menu-item-price">14,50 €</span>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-info">
+                  <h4>Couscous Merguez</h4>
+                  <p>Merguez vom Grill, Gemüse der Saison, Kichererbsen und Bouillon.</p>
+                </div>
+                <span class="menu-item-price">14,50 €</span>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-info">
+                  <h4>Couscous Sultan</h4>
+                  <p>Kalbfleisch, Gemüse der Saison, Kichererbsen und Bouillon.</p>
+                </div>
+                <span class="menu-item-price">15,50 €</span>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-info">
+                  <h4>Couscous Royal</h4>
+                  <p>Hackfleischbällchen, gegrilltem Merguez und Hähnchen, dazu Gemüse der Saison, Kichererbsen und Bouillon.</p>
+                </div>
+                <span class="menu-item-price">17,50 €</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-category reveal">
+            <h3>Reisgericht &amp; Makarouna</h3>
+            <div class="menu-items">
+              <div class="menu-item">
+                <div class="menu-item-info">
+                  <h4>Rouz Jerbi</h4>
+                  <p>Typische tunesische Spezialität aus Djerba: schonend gedämpfter, gewürzter Reis mit verschiedenen Gemüsesorten und Kräutern.</p>
+                </div>
+                <span class="menu-item-price">12,50 €</span>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-info">
+                  <h4>Makarouna Vegetarisch</h4>
+                  <p>Tunesische Pasta mit Tomatensauce, Kartoffeln und Kichererbsen.</p>
+                </div>
+                <span class="menu-item-price">9,50 €</span>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-info">
+                  <h4>Makarouna Thunfisch</h4>
+                  <p>Pasta mit frischen Tomaten, Thunfisch, Kapern, grünen Oliven und frischer Petersilie.</p>
+                </div>
+                <span class="menu-item-price">10,50 €</span>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-info">
+                  <h4>Makarouna Poulet</h4>
+                  <p>Pasta mit Tomatensauce, saftiger Hähnchenunterkeule, Kartoffeln und Kichererbsen.</p>
+                </div>
+                <span class="menu-item-price">12,50 €</span>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-info">
+                  <h4>Makarouna Bnadek</h4>
+                  <p>Pasta mit Tomatensauce und Hackbällchen.</p>
+                </div>
+                <span class="menu-item-price">13,50 €</span>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-info">
+                  <h4>Makarouna Meeresfrüchte</h4>
+                  <p>Pasta mit Tomatensauce und Meeresfrüchten.</p>
+                </div>
+                <span class="menu-item-price">14,50 €</span>
+              </div>
+            </div>
+          </div>
+
+
+
+
+          <div class="menu-category reveal">
+            <h3>Desserts</h3>
+            <div class="menu-items">
+              <div class="menu-item">
+                <div class="menu-item-info">
+                  <h4>Arabischer Gebäckteller</h4>
+                </div>
+                <span class="menu-item-price">3,50 €</span>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-info">
+                  <h4>Gateau Bisciuts</h4>
+                  <p>Keksboden mit selbstgemachter Haselnussbutter-Crème.</p>
+                </div>
+                <span class="menu-item-price">4,00 €</span>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-info">
+                  <h4>Tunesische Assida</h4>
+                  <p>Cremige Süßspeise aus gerösteten Nüssen (z. B. Haselnuss, Pistazien oder Zgougou) über selbstgemachtem Pudding.</p>
+                </div>
+                <span class="menu-item-price">5,00 €</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-category reveal">
+            <h3>Getränke</h3>
+            <div class="menu-items">
+              <div class="menu-item">
+                <div class="menu-item-info">
+                  <h4>Cola / Cola Zero / Fanta / Mezzo Mix / Sprite (0,2 l)</h4>
+                </div>
+                <span class="menu-item-price">2,50 €</span>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-info">
+                  <h4>Apfelschorle</h4>
+                </div>
+                <span class="menu-item-price">2,50 €</span>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-info">
+                  <h4>Bionade (Holunder oder Ingwer-Orange)</h4>
+                </div>
+                <span class="menu-item-price">3,00 €</span>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-info">
+                  <h4>Fassbrause (Zitrone, Mango oder Maracuja)</h4>
+                </div>
+                <span class="menu-item-price">3,00 €</span>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-info">
+                  <h4>Orangina</h4>
+                </div>
+                <span class="menu-item-price">3,50 €</span>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-info">
+                  <h4>Wasser Selters</h4>
+                  <p>0,2 l / 0,75 l</p>
+                </div>
+                <span class="menu-item-price">2,50 € / 7,00 €</span>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-info">
+                  <h4>Marokkanischer Pfefferminztee</h4>
+                  <p>Klein / Groß</p>
+                </div>
+                <span class="menu-item-price">3,50 € / 4,50 €</span>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-info">
+                  <h4>Mokka</h4>
+                </div>
+                <span class="menu-item-price">3,50 €</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <p class="menu-note">Alle Preise inkl. MwSt. Quelle: <a href="https://www.medinakoeln.de/menus-karte/" target="_blank" rel="noopener">medinakoeln.de</a> – Änderungen vorbehalten.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Mit <span class="heart">♥</span> geschenkt zur Hochzeit von Melina &amp; Simon</p>
+  </footer>
+
+  <!-- Lightbox -->
+  <div class="lightbox">
+    <button class="lightbox-close" aria-label="Schließen">✕</button>
+    <button class="lightbox-prev" aria-label="Vorheriges Bild">‹</button>
+    <img src="" alt="" />
+    <button class="lightbox-next" aria-label="Nächstes Bild">›</button>
+  </div>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
+
+
