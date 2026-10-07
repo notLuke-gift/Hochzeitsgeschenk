@@ -96,15 +96,11 @@ p { color: var(--color-text-muted); }
 }
 .btn-primary:hover { transform: translateY(-2px); background: var(--color-gold-light); }
 .btn-secondary {
-  background: transparent;
+  background: var(--color-gold);
   border-color: var(--color-gold);
   color: var(--color-bg-dark);
 }
-.btn-secondary:hover {
-  background: var(--color-gold);
-  color: var(--color-bg-dark);
-  transform: translateY(-2px);
-}
+.btn-secondary:hover { transform: translateY(-2px); background: var(--color-gold-light); }
 
 /* ---------- Scroll-Reveal Animation ---------- */
 .reveal {
